@@ -1,0 +1,86 @@
+/* Fonte Google opcional */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  background: #f8f8f8;
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  background: #0b3d6d;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+header nav {
+  margin-top: 0.5rem;
+}
+
+header nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #ffd700;
+}
+
+/* Layout principal em 2 colunas iguais em altura */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* esquerda maior, direita menor */
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  align-items: stretch; /* força colunas mesma altura */
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Layout interno (texto + imagem lado a lado) */
+.two-column {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.two-column p {
+  flex: 2;
+}
+
+.two-column img {
+  flex: 1;
+  max-width: 220px;
+  border-radius: 8px;
+}
+
+/* Rodapé */
+footer {
+  background: #0b3d6d;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
