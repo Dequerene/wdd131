@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Temple Album</title>
+  <meta name="description" content="A responsive, accessible album of temple images built with mobile-first CSS Grid and Flexbox." />
+
+  <!-- Google Fonts (feel free to change) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS (mobile first, then larger) -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+
+  <!-- JS (deferred) -->
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+  <!-- Skip link for keyboard users (A11y) -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <h1 class="brand">Temple Album</h1>
+
+    <!-- Mobile-only hamburger -->
+    <button id="hamburger" class="hamburger" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
+
+    <nav id="primary-nav" class="nav" role="navigation" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#" aria-current="page">Home</a></li>
+        <li><a class="nav__link" href="#">Old</a></li>
+        <li><a class="nav__link" href="#">New</a></li>
+        <li><a class="nav__link" href="#">Large</a></li>
+        <li><a class="nav__link" href="#">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1 class="page-title">Home</h1>
+
+    <!-- Replace images/* with your own .webp ≤100 KB -->
+    <section class="gallery" aria-label="Temple photo gallery">
+      <figure>
+        <img src="images/temple1.webp" alt="San Diego California Temple" loading="lazy" width="960" height="640"
+             sizes="(min-width:960px) 33vw, (min-width:720px) 50vw, 92vw">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple2.webp" alt="Accra Ghana Temple" loading="lazy" width="960" height="640"
+             sizes="(min-width:960px) 33vw, (min-width:720px) 50vw, 92vw">
+        <figcaption>Accra Ghana</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple3.webp" alt="Maputo Mozambique Temple" loading="lazy" width="960" height="640"
+             sizes="(min-width:960px) 33vw, (min-width:720px) 50vw, 92vw">
+        <figcaption>Maputo Mozambique</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple4.webp" alt="São Paulo Brazil Temple" loading="lazy" width="960" height="640"
+             sizes="(min-width:960px) 33vw, (min-width:720px) 50vw, 92vw">
+        <figcaption>São Paulo Brazil</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple5.webp" alt="Rome Italy Temple" loading="lazy" width="960" height="640"
+             sizes="(min-width:960px) 33vw, (min-width:720px) 50vw, 92vw">
+        <figcaption>Rome Italy</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple6.webp" alt="Paris France Temple" loading="lazy" width="960" height="640"
+             sizes="(min-width:960px) 33vw, (min-width:720px) 50vw, 92vw">
+        <figcaption>Paris France</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple7.webp" alt="Johannesburg South Africa Temple" loading="lazy" width="960" height="640"
+             sizes="(min-width:960px) 33vw, (min-width:720px) 50vw, 92vw">
+        <figcaption>Johannesburg South Africa</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple8.webp" alt="Hong Kong China Temple" loading="lazy" width="960" height="640"
+             sizes="(min-width:960px) 33vw, (min-width:720px) 50vw, 92vw">
+        <figcaption>Hong Kong China</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple9.webp" alt="Provo City Center Temple" loading="lazy" width="960" height="640"
+             sizes="(min-width:960px) 33vw, (min-width:720px) 50vw, 92vw">
+        <figcaption>Provo City Center</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> • Osvaldo João • Mozambique</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
