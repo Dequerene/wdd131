@@ -1,5 +1,5 @@
 :root{
-  --brand:#4b0082;    /* header/footer color */
+  --brand:#4b0082;
   --ink:#222;
   --muted:#5a5a6a;
   --card:#fff;
@@ -7,28 +7,20 @@
   --radius:12px;
   --shadow:0 6px 14px rgba(0,0,0,.06);
 }
-
-/* Base */
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:3px solid #ffbf47; outline-offset:2px}
-
-/* Skip link (A11y) */
 .skip-link{
   position:absolute; left:-999px; top:auto;
   background:#fff; color:#000; padding:.5rem .75rem; border-radius:8px;
 }
 .skip-link:focus{ left:1rem; top:1rem; z-index:9999; }
-
-/* Body */
 body{
   font-family:Poppins,system-ui,Segoe UI,Roboto,Arial,sans-serif;
   background:var(--bg); color:var(--ink); line-height:1.5;
 }
-
-/* Header */
 .site-header{
   background:var(--brand); color:#fff;
   display:flex; align-items:center; justify-content:space-between;
@@ -37,19 +29,15 @@ body{
 .brand{
   margin:0; font-family:Merriweather,serif; font-weight:700; font-size:1.35rem;
 }
-
-/* Hamburger (mobile only by default) */
 .hamburger{
   background:transparent; border:0; color:#fff;
   font-size:1.8rem; line-height:1; cursor:pointer;
 }
-
-/* Nav (Flex). Hidden until toggled on mobile */
 .nav{ display:none; }
 .nav.open{ display:block; }
 .nav__list{
   list-style:none; margin:0; padding:.5rem 0 0 0;
-  display:flex; flex-direction:column; gap:.25rem; /* Flex requirement */
+  display:flex; flex-direction:column; gap:.25rem;
 }
 .nav__link{
   display:block; padding:.5rem .75rem; border-radius:8px; font-weight:600;
@@ -57,48 +45,36 @@ body{
 .nav__link:hover,
 .nav__link:focus{
   background:rgba(255,255,255,.18);
-  text-decoration:underline;          /* hover requirement */
+  text-decoration:underline;
   outline:none;
 }
-
-/* Main limited width & centered */
 #main{ max-width:92%; margin:1.25rem auto 2.5rem; }
 .page-title{
   text-align:center; font-family:Merriweather,serif; font-size:1.4rem;
   margin:.75rem 0 1.25rem;
 }
-
-/* Gallery — 1 column on mobile */
 .gallery{
   display:grid;
-  grid-template-columns:1fr;   /* exactly one column mobile */
+  grid-template-columns:1fr;
   gap:1.2rem;
   justify-items:center;
 }
-
-/* Cards */
 figure{
-  width: clamp(220px, 92vw, 320px);  /* prevents giant cards on small screens */
+  width: clamp(220px, 92vw, 320px);
   margin:0; background:var(--card);
   border-radius:var(--radius); box-shadow:var(--shadow);
   padding:.6rem; transition:transform .15s ease;
 }
 figure:hover{ transform: translateY(-2px); }
 figcaption{ color:var(--muted); text-align:center; margin-top:.5rem; }
-
-/* Images */
 .gallery img{
   width:100%; height:auto; border-radius:10px;
-  object-fit:cover; aspect-ratio:4/3; /* uniform thumbnails */
+  object-fit:cover; aspect-ratio:4/3;
 }
-
-/* Footer */
 .site-footer{
   background:var(--brand); color:#fff; text-align:center;
   padding:1rem .75rem; font-size:.95rem;
 }
-
-/* Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce){
   *{scroll-behavior:auto}
   figure:hover{ transform:none }
