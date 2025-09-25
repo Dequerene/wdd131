@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mozambique: quick facts, highlights, and current weather." />
+  <meta name="author" content="Osvaldo João" />
+  <title>Mozambique | WDD 131 – Country Page</title>
+  <link rel="stylesheet" href="styles/place.css" />
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="brandbar">
+      <h1>Mozambique</h1>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- HERO with WebP + srcset -->
+    <section class="hero" aria-label="Hero image of Mozambique coastline">
+      <picture>
+        <source srcset="images/hero-small.webp" media="(max-width: 600px)" type="image/webp">
+        <source srcset="images/hero-medium.webp" media="(max-width: 1000px)" type="image/webp">
+        <img src="images/hero-large.webp" alt="Turquoise waters and palm trees on a Mozambican beach" loading="eager" />
+      </picture>
+
+      <aside class="card data-card" aria-labelledby="facts-h">
+        <h2 id="facts-h">Data</h2>
+        <dl>
+          <div><dt>Area:</dt><dd>801,590 sq km</dd></div>
+          <div><dt>Population:</dt><dd>≈ 33,000,000</dd></div>
+          <div><dt>Capital:</dt><dd>Maputo</dd></div>
+          <div><dt>Languages:</dt><dd>Portuguese; local languages</dd></div>
+          <div><dt>Currency:</dt><dd>MZN (Metical)</dd></div>
+          <div><dt>Time Zone:</dt><dd>UTC+2</dd></div>
+          <div><dt>Calling Code:</dt><dd>+258</dd></div>
+          <div><dt>Internet TLD:</dt><dd>.mz</dd></div>
+        </dl>
+      </aside>
+
+      <aside class="card weather-card" aria-labelledby="weather-hero-h">
+        <div class="weather-header">
+          <h2 id="weather-hero-h">Weather</h2>
+          <svg class="wx-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="img">
+            <path d="M6 14a4 4 0 1 1 7.874-1.001A3.5 3.5 0 1 1 17.5 17H7a3 3 0 0 1-1-5.83V11a3 3 0 0 0 0 6h10.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="8" cy="9" r="3" fill="currentColor"/>
+          </svg>
+        </div>
+        <ul class="wx-list">
+          <li><strong>Temperature:</strong> <span id="temp">10</span> °C</li>
+          <li><strong>Conditions:</strong> <span id="condition">Partly Cloudy</span></li>
+          <li><strong>Wind:</strong> <span id="wind">5</span> km/h</li>
+          <li><strong>Wind Chill:</strong> <span id="windchill">N/A</span></li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- Mobile stacked sections -->
+    <section class="stacked data" aria-labelledby="stack-facts-h">
+      <h2 id="stack-facts-h">Data</h2>
+      <dl>
+        <div><dt>Area:</dt><dd>801,590 sq km</dd></div>
+        <div><dt>Population:</dt><dd>≈ 33,000,000</dd></div>
+        <div><dt>Capital:</dt><dd>Maputo</dd></div>
+        <div><dt>Languages:</dt><dd>Portuguese; local languages</dd></div>
+        <div><dt>Currency:</dt><dd>MZN (Metical)</dd></div>
+        <div><dt>Time Zone:</dt><dd>UTC+2</dd></div>
+        <div><dt>Calling Code:</dt><dd>+258</dd></div>
+        <div><dt>Internet TLD:</dt><dd>.mz</dd></div>
+      </dl>
+    </section>
+
+    <section class="stacked weather" aria-labelledby="stack-weather-h">
+      <div class="weather-header">
+        <h2 id="stack-weather-h">Weather</h2>
+        <svg class="wx-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="img">
+          <path d="M6 14a4 4 0 1 1 7.874-1.001A3.5 3.5 0 1 1 17.5 17H7a3 3 0 0 1-1-5.83V11a3 3 0 0 0 0 6h10.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="8" cy="9" r="3" fill="currentColor"/>
+        </svg>
+      </div>
+      <ul class="wx-list">
+        <li><strong>Temperature:</strong> <span id="temp-m">10</span> °C</li>
+        <li><strong>Conditions:</strong> Partly Cloudy</li>
+        <li><strong>Wind:</strong> <span id="wind-m">5</span> km/h</li>
+        <li><strong>Wind Chill:</strong> <span id="windchill-m">N/A</span></li>
+      </ul>
+    </section>
+
+    <article class="about" aria-labelledby="about-h">
+      <h2 id="about-h">About Mozambique</h2>
+      <p>
+        Mozambique stretches along the Indian Ocean with white‑sand beaches, coral reefs, and islands like the Bazaruto Archipelago.
+      </p>
+      <p>
+        Gorongosa National Park highlights rich wildlife, and Maputo blends Portuguese influence with African culture and music.
+      </p>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>© <span id="year"></span> • Osvaldo João • Mozambique</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+  </footer>
+</body>
+</html>
