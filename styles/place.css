@@ -10,15 +10,14 @@
   --radius: 1rem;
   --shadow: 0 8px 25px rgba(0,0,0,.15);
   --maxw: 1200px;
-  --stripe-h: 6px; /* thin black stripe height */
+  --stripe-h: 6px; 
 }
-
 
 body { margin: 0; font-family: system-ui, Roboto, Arial, sans-serif; color: var(--text); background: #fff; }
 
 .brandbar { background: var(--red); color: #fff; padding: 1.2rem 1rem; text-align: center; border-bottom: .5rem solid var(--green); position: relative; }
 .brandbar h1 { margin: 0; font-size: clamp(1.6rem, 1.5rem + 2vw, 2.6rem); }
-/* Black stripe with white pinstripes (flag-inspired) */
+
 .brandbar::after { content: ""; position: absolute; left: 0; right: 0; bottom: -0.5rem; height: var(--stripe-h); background: var(--black); box-shadow: 0 -2px 0 0 var(--white), 0 2px 0 0 var(--white); }
 
 .brandbar h1 { margin: 0; font-size: clamp(1.6rem, 1.5rem + 2vw, 2.6rem); }
@@ -47,7 +46,7 @@ main { width: min(100% - 2rem, var(--maxw)); margin: 0 auto; }
 .about { margin: 1.5rem 0 2.5rem; padding: 1rem 1.25rem; background: #fafafa; border-radius: .75rem; box-shadow: var(--shadow); }
 
 .site-footer { text-align: center; background: var(--red); color: #fff; padding: 1.5rem 1rem 2rem; border-top: .5rem solid var(--green); position: relative; }
-/* Footer black stripe with white pinstripes */
+
 .site-footer::before { content: ""; position: absolute; left: 0; right: 0; top: -0.5rem; height: var(--stripe-h); background: var(--black); box-shadow: 0 -2px 0 0 var(--white), 0 2px 0 0 var(--white); }
 
 @media (max-width: 767.98px) {
