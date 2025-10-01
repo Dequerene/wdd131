@@ -1,4 +1,4 @@
-/* Base (keeps your original font & brand) */
+
 :root{
   --brand:#4b0082;
   --ink:#222;
@@ -23,7 +23,6 @@ body{
   background:var(--bg); color:var(--ink); line-height:1.5;
 }
 
-/* Header & Nav */
 .site-header{
   background:var(--brand); color:#fff;
   display:flex; align-items:center; justify-content:space-between;
@@ -63,14 +62,12 @@ body{
   box-shadow:0 0 0 3px rgba(255,255,255,.25) inset;
 }
 
-/* Main */
 #main{ max-width:92%; margin:1.25rem auto 2.5rem; }
 .page-title{
   text-align:center; font-family:Merriweather,serif; font-size:1.4rem;
   margin:.75rem 0 1.25rem;
 }
 
-/* Dynamic cards grid */
 .cards{
   display:grid;
   grid-template-columns:1fr;
@@ -109,13 +106,11 @@ body{
 .card dt{ color:var(--muted); }
 .card dd{ margin:0; }
 
-/* Footer */
 .site-footer{
   background:var(--brand); color:#fff; text-align:center;
   padding:1rem .75rem; font-size:.95rem;
 }
 
-/* Responsive */
 @media (min-width:720px){
   .hamburger{ display:none; }
   .nav{ display:block; }

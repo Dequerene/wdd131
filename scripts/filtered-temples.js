@@ -1,9 +1,4 @@
-// -------------------------------
-// W04 Enhanced Temple Picture Album
-// Meets rubric: dynamic cards, filters, lazy images, a11y, footer meta
-// -------------------------------
 
-// 1) Data (7 originals + 3 added)
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -105,7 +100,6 @@ const temples = [
 
 ];
 
-// 2) Utilities
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 const yearFrom = (dedicated) => {
@@ -125,7 +119,6 @@ function el(tag, attrs = {}, children = []) {
   return node;
 }
 
-// Optional: validate data for missing keys (helps debugging)
 function validateTemples(arr) {
   const required = ["templeName", "location", "dedicated", "area", "imageUrl"];
   arr.forEach((t, i) => {
@@ -135,7 +128,6 @@ function validateTemples(arr) {
 }
 validateTemples(temples);
 
-// 3) Render logic
 const cards = $("#cards");
 const title = $("#results-title");
 
@@ -174,7 +166,6 @@ function renderList(list, heading = "Home") {
   cards.setAttribute("aria-busy", "false");
 }
 
-// 4) Filters
 const FILTERS = {
   all: () => temples,
   old: () => temples.filter((t) => yearFrom(t.dedicated) < 1900),
@@ -203,13 +194,12 @@ $$(".nav__btn").forEach((btn) =>
   })
 );
 
-// 5) Footer + Hamburger (DOM ready)
 document.addEventListener("DOMContentLoaded", () => {
-  // Footer year
+
   const y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
 
-  // Robust Last Modified
+
   const lm = document.getElementById("lastModified");
   if (lm) {
     const d = new Date(document.lastModified);
@@ -225,7 +215,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
   }
 
-  // Hamburger toggle (mobile)
   const btn = document.getElementById("hamburger");
   const nav = document.getElementById("primary-nav");
   if (btn && nav) {
@@ -236,12 +225,10 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     btn.addEventListener("click", toggle);
 
-    // Close menu after choosing a filter button
     nav.addEventListener("click", (e) => {
       if (e.target.matches(".nav__btn") && nav.classList.contains("open")) toggle();
     });
   }
 });
 
-// Initial render
 renderList(temples);
