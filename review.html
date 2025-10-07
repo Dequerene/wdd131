@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Confirmation page for your product review with a persistent submission counter.">
+  <title>Review Submitted</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base2.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Thanks for your review!</h1>
+  </header>
+
+  <main class="container narrow">
+    <section class="card">
+      <h2>Submission Details</h2>
+      <dl id="summary" class="summary"></dl>
+    </section>
+
+    <section class="card">
+      <h2>Your Review Streak</h2>
+      <p>You have submitted <strong id="reviewCount">0</strong> review(s) on this device.</p>
+      <p class="note">We store this count using <code>localStorage</code> so it persists across visits in this browser.</p>
+      <a class="btn" href="form.html">Write another review</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> • Osvaldo João • Mozambique</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="review.js" defer></script>
+</body>
+</html>

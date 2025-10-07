@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Submit a product review with rating, install date, useful features, and optional written feedback.">
+  <title>Product Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base2.css">
+  <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Product Review</h1>
+  </header>
+
+  <main class="container">
+    <form id="reviewForm" action="review.html" method="get">
+ 
+      <div class="field">
+        <label for="product">Product Name <span class="req" aria-hidden="true">*</span></label>
+        <select id="product" name="product" required>
+          <option value="" selected disabled>Select a Product ...</option>
+
+        </select>
+        <p class="help">Required • list populated from data</p>
+      </div>
+
+      <fieldset class="field">
+        <legend>Overall Rating <span class="req" aria-hidden="true">*</span></legend>
+        <div class="rating" role="radiogroup" aria-label="Overall rating">
+          <input type="radio" id="star5" name="rating" value="5" required>
+          <label for="star5" aria-label="5 stars" title="5 stars">★★★★★</label>
+
+          <input type="radio" id="star4" name="rating" value="4">
+          <label for="star4" aria-label="4 stars" title="4 stars">★★★★☆</label>
+
+          <input type="radio" id="star3" name="rating" value="3">
+          <label for="star3" aria-label="3 stars" title="3 stars">★★★☆☆</label>
+
+          <input type="radio" id="star2" name="rating" value="2">
+          <label for="star2" aria-label="2 stars" title="2 stars">★★☆☆☆</label>
+
+          <input type="radio" id="star1" name="rating" value="1">
+          <label for="star1" aria-label="1 star" title="1 star">★☆☆☆☆</label>
+        </div>
+      </fieldset>
+
+         <div class="field">
+        <label for="installed">Date of Installation <span class="req" aria-hidden="true">*</span></label>
+        <input type="date" id="installed" name="installed" required>
+      </div>
+
+        <fieldset class="field">
+        <legend>Which features did you find useful? <span class="sub">(Check all that apply)</span></legend>
+        <div class="checks">
+          <div class="check">
+            <input type="checkbox" id="f-durability" name="features" value="Durability">
+            <label for="f-durability">Durability</label>
+          </div>
+          <div class="check">
+            <input type="checkbox" id="f-ease" name="features" value="Ease of Use">
+            <label for="f-ease">Ease of Use</label>
+          </div>
+          <div class="check">
+            <input type="checkbox" id="f-performance" name="features" value="Performance">
+            <label for="f-performance">Performance</label>
+          </div>
+          <div class="check">
+            <input type="checkbox" id="f-design" name="features" value="Design">
+            <label for="f-design">Design</label>
+          </div>
+        </div>
+      </fieldset>
+
+         <div class="field">
+        <label for="review">Written Review <span class="sub">(Optional)</span></label>
+        <textarea id="review" name="review" rows="6" placeholder="Share details that would help other buyers…"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="username">Your Name <span class="sub">(Optional)</span></label>
+        <input type="text" id="username" name="username" autocomplete="name" placeholder="Jane Doe">
+      </div>
+
+      <div class="actions">
+        <input class="btn" type="submit" value="Post Review">
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> • Osvaldo João • Mozambique</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+
+  <script type="module" src="form.js"></script>
+</body>
+</html>

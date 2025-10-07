@@ -1,0 +1,22 @@
+form{background:var(--panel); padding:1.25rem; border-radius:var(--radius); box-shadow:0 10px 40px rgba(10,10,30,.07)}
+.field{display:grid; gap:.5rem; margin-bottom:1rem}
+label, legend{font-weight:700}
+input[type="text"], select, textarea, input[type="date"]{
+  padding:.8rem .9rem; border:1px solid #d7dbe2; border-radius:12px; background:#fff; outline:none;
+}
+input[type="text"]:focus, select:focus, textarea:focus, input[type="date"]:focus{box-shadow:0 0 0 4px rgba(147,51,234,.15); border-color:#bfa7ef}
+
+.actions{display:flex; justify-content:center; padding-top:.5rem}
+
+.rating{display:grid; grid-template-columns:repeat(5, 1fr); gap:.5rem; align-items:center}
+.rating input{position:absolute; opacity:0;}
+.rating label{display:block; text-align:center; padding:.6rem .4rem; border:1px solid #d7dbe2; border-radius:12px; cursor:pointer; user-select:none; font-size:1rem; background:#fff}
+.rating input:checked + label,
+.rating label:hover{border-color:var(--accent); box-shadow:0 0 0 3px rgba(147,51,234,.12)}
+
+.checks{display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:.25rem .75rem}
+.check{display:flex; align-items:center; gap:.6rem}
+
+@media (min-width: 720px){
+  form{padding:1.75rem 2rem}
+}

@@ -1,0 +1,29 @@
+:root{
+  --bg: #0b0a10;
+  --panel: #f7f7fb;
+  --ink: #16161d;
+  --muted: #6b6f76;
+  --accent: #5b21b6; 
+  --accent-2: #9333ea;
+  --ring: 2px solid rgba(93, 53, 185, .35);
+  --radius: 16px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font:16px/1.5 "Inter",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+  color:var(--ink); background:#fff;
+}
+.container{width:min(940px, 92%); margin-inline:auto; padding:2rem 0;}
+.container.narrow{width:min(720px, 92%)}
+.site-header{background:var(--bg); color:#fff; padding:1.25rem 0; text-align:center}
+.site-header h1{margin:0; font-weight:800; letter-spacing:.3px}
+.site-footer{margin-top:3rem; text-align:center; color:var(--muted); padding:2rem 0; border-top:1px solid #eaecf0}
+.card{background:var(--panel); border-radius:var(--radius); padding:1.25rem 1.25rem; box-shadow:0 8px 30px rgba(20,20,40,.06); margin-bottom:1.25rem}
+.btn{display:inline-block; padding:.9rem 1.2rem; border-radius:12px; border:none; background:var(--accent); color:#fff; font-weight:700; text-decoration:none; cursor:pointer}
+.btn:hover{background:var(--accent-2)}
+.help,.sub,.note{color:var(--muted); font-size:.9rem}
+.req{color:#b91c1c; font-weight:800; margin-left:.15rem}
+.summary{display:grid; grid-template-columns:max(140px) 1fr; gap:.25rem .75rem}
+.summary dt{font-weight:700}
+.summary dd{margin:0}
