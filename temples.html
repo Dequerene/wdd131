@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Album | WDD 131</title>
+  <meta name="description" content="WDD 131 Picture Album assignment by Osvaldo Dequerene João. This page displays a responsive temple album using CSS Grid, a hamburger menu, and JavaScript footer dates.">
+  <meta name="author" content="Osvaldo Dequerene João">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+  <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <div class="header-top">
+      <span class="site-title">Temple Album</span>
+      <button id="menu" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navigation">☰</button>
+    </div>
+
+    <nav id="navigation" class="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="temples.html">Old</a>
+      <a href="temples.html">New</a>
+      <a href="temples.html">Large</a>
+      <a href="temples.html">Small</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h1>Home</h1>
+
+    <div class="album">
+      <figure>
+        <img src="images/temple-provo.svg" alt="Provo City Center Temple illustration" width="400" height="300">
+        <figcaption>Provo City Center Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple-salt-lake.svg" alt="Salt Lake Temple illustration" width="400" height="300" loading="lazy">
+        <figcaption>Salt Lake Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple-orem.svg" alt="Orem Utah Temple illustration" width="400" height="300" loading="lazy">
+        <figcaption>Orem Utah Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple-italy.svg" alt="Rome Italy Temple illustration" width="400" height="300" loading="lazy">
+        <figcaption>Rome Italy Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple-accra.svg" alt="Accra Ghana Temple illustration" width="400" height="300" loading="lazy">
+        <figcaption>Accra Ghana Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple-south-africa.svg" alt="Johannesburg South Africa Temple illustration" width="400" height="300" loading="lazy">
+        <figcaption>Johannesburg South Africa Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple-sapin.jpg" alt="Madrid Spain Temple illustration" width="400" height="300" loading="lazy">
+        <figcaption>Madrid Spain Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple-lisbon.svg" alt="Lisbon Portugal Temple illustration" width="400" height="300" loading="lazy">
+        <figcaption>Lisbon Portugal Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple-mozambique.svg" alt="Maputo Mozambique Temple illustration" width="400" height="300" loading="lazy">
+        <figcaption>Maputo Mozambique Temple</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="currentyear"></span> 🌍 Osvaldo Dequerene João 🌍 Mozambique</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
