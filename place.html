@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mozambique | WDD 131</title>
+  <meta name="description" content="WDD 131 country page about Mozambique with data, weather, responsive WebP images, and wind chill.">
+  <meta name="author" content="Osvaldo Dequerene João">
+
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Mozambique</h1>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Mozambique landscape">
+      <img
+        src="images/mozambique-hero-small.webp"
+        srcset="images/small-hero.webp 600w, images/mozambique-hero-large.webp 1200w"
+        sizes="(min-width: 700px) 1200px, 600px"
+        alt="Beautiful beach and coastline in Mozambique"
+        width="1200"
+        height="700">
+    </section>
+
+    <section class="card data-card">
+      <h2>Data</h2>
+
+      <dl>
+        <div>
+          <dt>Area:</dt>
+          <dd>801,590 sq km</dd>
+        </div>
+        <div>
+          <dt>Population:</dt>
+          <dd>About 33 million</dd>
+        </div>
+        <div>
+          <dt>Capital:</dt>
+          <dd>Maputo</dd>
+        </div>
+        <div>
+          <dt>Languages:</dt>
+          <dd>Portuguese</dd>
+        </div>
+        <div>
+          <dt>Currency:</dt>
+          <dd>Mozambican Metical</dd>
+        </div>
+        <div>
+          <dt>Time Zone:</dt>
+          <dd>UTC+2</dd>
+        </div>
+        <div>
+          <dt>Calling Code:</dt>
+          <dd>+258</dd>
+        </div>
+        <div>
+          <dt>Internet TLD:</dt>
+          <dd>.mz</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="card weather-card">
+      <h2>Weather</h2>
+
+      <img
+        class="weather-icon"
+        src="images/weather-icon.svg"
+        alt="Partly cloudy weather icon"
+        width="64"
+        height="64">
+
+      <dl>
+        <div>
+          <dt>Temperature:</dt>
+          <dd><span id="temperature">8</span> °C</dd>
+        </div>
+        <div>
+          <dt>Conditions:</dt>
+          <dd>Partly Cloudy</dd>
+        </div>
+        <div>
+          <dt>Wind:</dt>
+          <dd><span id="wind-speed">10</span> km/h</dd>
+        </div>
+        <div>
+          <dt>Wind Chill:</dt>
+          <dd><span id="wind-chill"></span></dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="currentyear"></span> 🌍 Osvaldo Dequerene João 🌍 Mozambique</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
