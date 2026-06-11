@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --primary-color: #006b3f;
+  --secondary-color: #fcd116;
+  --background-color: #ffffff;
+  --text-color: #222222;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+header,
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+h1,
+h2 {
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  color: var(--primary-color);
+}
+
+section {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-left: 6px solid var(--secondary-color);
+  background-color: #f8f8f8;
+}
+
+.color-sample {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.green {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.yellow {
+  background-color: var(--secondary-color);
+  color: #222222;
+}
+
+.wireframe {
+  border: 2px solid var(--primary-color);
+  padding: 1rem;
+  background-color: white;
+}
+
+.wireframe p {
+  border: 1px dashed #555555;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.desktop p:nth-child(4) {
+  background-color: var(--secondary-color);
+}
