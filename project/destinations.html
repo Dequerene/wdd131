@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Top travel destinations in Mozambique including beaches, cities, and nature.">
+  <meta name="author" content="Osvaldo João">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mozambique Travel Guide | Destinations</title>
+  <link rel="stylesheet" href="styles/project.css">
+  <script src="scripts/project.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="images/logo.webp" alt="Mozambique Travel Guide logo" width="80" height="80">
+      <h1>Mozambique Travel Guide</h1>
+      <button id="menuButton" aria-label="Open navigation menu">☰</button>
+    </div>
+
+    <nav id="navigation">
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="culture.html">Culture</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Top Destinations</h2>
+      <p>Choose a category to explore cities, beaches, and nature destinations in Mozambique.</p>
+
+      <div class="filters">
+        <button class="filterButton" data-filter="all">All</button>
+        <button class="filterButton" data-filter="beach">Beaches</button>
+        <button class="filterButton" data-filter="city">Cities</button>
+        <button class="filterButton" data-filter="nature">Nature</button>
+      </div>
+
+      <div id="destinationCards" class="cards"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Osvaldo João | WDD 131 Final Project</p>
+    <p id="lastModified"></p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+</body>
+</html>

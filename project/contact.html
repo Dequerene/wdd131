@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Contact form for visitors interested in learning more about travel in Mozambique.">
+  <meta name="author" content="Osvaldo João">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mozambique Travel Guide | Contact</title>
+  <link rel="stylesheet" href="styles/project.css">
+  <script src="scripts/project.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="images/logo.webp" alt="Mozambique Travel Guide logo" width="80" height="80">
+      <h1>Mozambique Travel Guide</h1>
+      <button id="menuButton" aria-label="Open navigation menu">☰</button>
+    </div>
+
+    <nav id="navigation">
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="culture.html">Culture</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Contact Us</h2>
+      <p>Use this form to ask questions about visiting Mozambique or to share what kind of travel experience interests you most.</p>
+
+      <form id="contactForm">
+        <label for="name">Name <span class="required">*</span></label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="interest">Travel Interest <span class="required">*</span></label>
+        <select id="interest" name="interest" required>
+          <option value="" disabled selected>Select an option ...</option>
+          <option value="beaches">Beaches</option>
+          <option value="culture">Culture</option>
+          <option value="food">Food</option>
+          <option value="nature">Nature</option>
+        </select>
+
+        <label for="message">Message <span class="required">*</span></label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <input type="submit" value="Send Message">
+      </form>
+
+      <p id="formMessage"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Osvaldo João | WDD 131 Final Project</p>
+    <p id="lastModified"></p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+</body>
+</html>
